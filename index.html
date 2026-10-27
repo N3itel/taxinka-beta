@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#14162B">
+  <meta name="description" content="Prueba Taxinka en el navegador o instálala en Android. Es una demostración sin servidor: los viajes son simulados y no se cobra nada.">
+  <title>Taxinka · beta de demostración</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="pasajero/icons/Icon-192.png">
+  <link rel="stylesheet" href="beta.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <span class="brand">
+        <span class="badge" aria-hidden="true">
+          <svg viewBox="0 0 512 512"><path fill="#14162B" d="M51.2 89.6 A17.92 17.92 0 0 1 69.12 71.68 L442.88 71.68 A17.92 17.92 0 0 1 460.8 89.6 L460.8 140.8 A17.92 17.92 0 0 1 442.88 158.72 L396.8 158.72 A17.92 17.92 0 0 0 378.88 176.64 L378.88 212.48 A17.92 17.92 0 0 1 360.96 230.4 L330.24 230.4 A17.92 17.92 0 0 0 312.32 248.32 L312.32 422.4 A17.92 17.92 0 0 1 294.4 440.32 L217.6 440.32 A17.92 17.92 0 0 1 199.68 422.4 L199.68 248.32 A17.92 17.92 0 0 0 181.76 230.4 L151.04 230.4 A17.92 17.92 0 0 1 133.12 212.48 L133.12 176.64 A17.92 17.92 0 0 0 115.2 158.72 L69.12 158.72 A17.92 17.92 0 0 1 51.2 140.8 Z"/></svg>
+        </span>
+        <span class="word">taxinka</span>
+      </span>
+      <span class="chip">Beta de demostración</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Prueba Taxinka hoy, sin instalar nada</h1>
+        <p class="lead">Las dos apps completas, la de pasajeros y la de conductores, funcionando solas en tu teléfono o en tu computadora. Los conductores, las ofertas y los viajes son simulados: no se cobra nada y no se usa tu ubicación.</p>
+      </div>
+    </section>
+
+    <section class="wrap apps" aria-label="Las apps">
+      <article class="app app-pasajero">
+        <div class="app-head">
+          <img src="pasajero/icons/Icon-192.png" alt="" width="56" height="56">
+          <div>
+            <h2>Taxinka</h2>
+            <p>Para pasajeros</p>
+          </div>
+        </div>
+        <p class="app-text">Pide un auto, una mototaxi o un envío, propone tu precio y elige entre las ofertas de los conductores.</p>
+        <div class="actions">
+          <a class="btn btn-ink" href="pasajero/">Probar en el navegador</a>
+          <a class="btn btn-line" href="descargas/taxinka-pasajero-demo.apk" download>Descargar para Android <small>APK · 39,1 MB</small></a>
+        </div>
+        <div class="shots">
+          <img src="img/pasajero-1.webp" alt="Inicio: ¿a dónde vas?, con autos cerca en el mapa" width="180" height="390" loading="lazy">
+          <img src="img/pasajero-2.webp" alt="Ofertas de tres conductores para elegir" width="180" height="390" loading="lazy">
+          <img src="img/pasajero-3.webp" alt="Viaje en camino con el botón SOS" width="180" height="390" loading="lazy">
+        </div>
+      </article>
+
+      <article class="app app-conductor">
+        <div class="app-head">
+          <img src="conductor/icons/Icon-192.png" alt="" width="56" height="56">
+          <div>
+            <h2>Taxinka Conductor</h2>
+            <p>Para conductores</p>
+          </div>
+        </div>
+        <p class="app-text">Conéctate, recibe solicitudes cerca de ti, acepta o haz tu contraoferta y lleva el viaje hasta el final.</p>
+        <div class="actions">
+          <a class="btn btn-yellow" href="conductor/">Probar en el navegador</a>
+          <a class="btn btn-line-light" href="descargas/taxinka-conductor-demo.apk" download>Descargar para Android <small>APK · 38,7 MB</small></a>
+        </div>
+        <div class="shots">
+          <img src="img/conductor-1.webp" alt="Inicio del conductor conectado, con su billetera" width="180" height="390" loading="lazy">
+          <img src="img/conductor-2.webp" alt="Nueva solicitud con el precio ofrecido y la contraoferta" width="180" height="390" loading="lazy">
+          <img src="img/conductor-3.webp" alt="Viaje en curso con la ruta al destino" width="180" height="390" loading="lazy">
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap guide">
+      <h2>Qué probar</h2>
+      <p class="muted">Para entrar, escribe cualquier celular que empiece con 9. El código aparece en la pantalla: es <strong>123456</strong>.</p>
+      <div class="cols">
+        <div class="card">
+          <h3>Como pasajero</h3>
+          <ol>
+            <li>La primera vez te recibe una bienvenida de tres pasos. Las pistas amarillas te guían en cada pantalla.</li>
+            <li>Toca <b>Destino</b> y escribe, por ejemplo, «Jockey» o «Larcomar», toca un <b>lugar conocido</b> o toca <b>Elegir en el mapa</b> y mueve el mapa hasta el punto exacto.</li>
+            <li>Mira el precio sugerido (toca <b>¿Cómo se calcula?</b> para ver el desglose), ajusta tu oferta y toca <b>Buscar conductor</b>.</li>
+            <li>El radar busca y en unos segundos llegan ofertas: elige la que prefieras.</li>
+            <li>Sigue el viaje en el mapa (el auto avanza por las calles) y escríbele al conductor en <b>Mensajes</b>. Sube el volumen: cada momento suena como en el video.</li>
+            <li>Prueba también un <b>Envío</b>, una parada en el camino o programar el viaje para más tarde.</li>
+            <li>En el precio, toca <b>Viajo yo</b> para pedir para otra persona, o <b>Preferencias</b> para avisar que llevas mascota.</li>
+            <li>En el viaje, elige a quién <b>avisar que llegaste bien</b> y, si quieres, deja una <b>propina</b>; al llegar, mira el <b>recibo</b> y guarda al conductor como <b>favorito</b>.</li>
+            <li>Pon tu teléfono en <b>modo oscuro</b>: Taxinka también cambia. Y para tu segundo viaje, el inicio te deja repetir el anterior de un toque.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Como conductor</h3>
+          <ol>
+            <li>La primera vez te recibe una bienvenida de tres pasos; después, las pistas amarillas te guían.</li>
+            <li>Toca <b>Demo: llenar con un vehículo de ejemplo</b> y continúa.</li>
+            <li>Toca <b>Demo: completar con documentos de ejemplo</b>: tu alta queda aprobada.</li>
+            <li>Conéctate (el radar empieza a buscar viajes) y toca <b>Demo: recibir una solicitud</b>.</li>
+            <li>Acepta o haz una contraoferta. En el recojo, el PIN del pasajero es <strong>4821</strong>.</li>
+            <li>Al rato de iniciar el viaje, la pasajera de ejemplo te deja una <b>propina</b>: se cobra junto con el viaje y no lleva comisión.</li>
+            <li>Termina el viaje y revisa tu billetera: las recargas también son simuladas.</li>
+            <li>En el inicio mira <b>Tus ganancias</b>, las <b>Zonas con demanda</b> y prueba <b>Rumbo a casa</b>.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap install">
+      <div class="card">
+        <h3>Instalar en Android</h3>
+        <ol>
+          <li>Toca <b>Descargar para Android</b> y abre el archivo cuando termine.</li>
+          <li>Si el teléfono lo pide, permite instalar apps desde tu navegador.</li>
+          <li>Si aparece un aviso de Play Protect, toca <b>Más detalles</b> y luego <b>Instalar de todas formas</b>.</li>
+        </ol>
+        <p class="muted small">Se instalan como «Taxinka Demo» y «Conductor Demo», aparte de las apps que saldrán en las tiendas.</p>
+      </div>
+      <div class="card">
+        <h3>En iPhone</h3>
+        <p>Usa <b>Probar en el navegador</b> en Safari. Para tenerla como una app más, toca <b>Compartir</b> y luego <b>Agregar a pantalla de inicio</b>.</p>
+      </div>
+      <div class="card qr">
+        <h3>Ábrela en tu celular</h3>
+        <svg role="img" aria-label="Código QR de esta página" viewBox="0 0 33 33" class="segno"><title>Código QR de esta página</title><path fill="#fff" d="M0 0h33v33h-33z"/><path class="qrline" stroke="#14162b" d="M2 2.5h7m2 0h1m2 0h3m3 0h1m3 0h7m-29 1h1m5 0h1m1 0h1m1 0h3m5 0h1m3 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m4 0h3m2 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m1 0h4m2 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m4 0h1m1 0h1m2 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m3 0h1m1 0h3m1 0h2m4 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h1m1 0h3m1 0h1m1 0h1m2 0h1m-20 1h1m5 0h1m1 0h1m2 0h2m2 0h1m1 0h2m2 0h2m2 0h3m-28 1h2m3 0h1m2 0h1m3 0h1m1 0h2m1 0h3m3 0h2m1 0h2m-26 1h2m2 0h2m1 0h2m1 0h1m2 0h1m1 0h1m2 0h1m3 0h1m-24 1h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h1m4 0h2m1 0h3m-22 1h3m3 0h1m1 0h5m2 0h1m2 0h1m5 0h1m-28 1h2m2 0h1m1 0h1m1 0h1m3 0h1m1 0h2m2 0h2m1 0h3m2 0h2m-23 1h1m2 0h1m2 0h5m5 0h5m-26 1h5m3 0h6m3 0h1m1 0h1m1 0h1m3 0h1m1 0h1m-27 1h2m1 0h4m5 0h1m2 0h1m1 0h1m1 0h1m3 0h2m-27 1h2m1 0h2m4 0h1m1 0h2m2 0h1m2 0h3m1 0h3m1 0h3m-29 1h4m1 0h4m1 0h1m1 0h4m1 0h4m4 0h1m2 0h1m-29 1h1m1 0h1m5 0h3m1 0h1m1 0h1m5 0h1m1 0h1m1 0h1m-25 1h1m3 0h5m3 0h1m2 0h1m1 0h1m2 0h5m1 0h3m-21 1h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h2m3 0h2m-26 1h7m2 0h1m2 0h5m1 0h3m1 0h1m1 0h3m-27 1h1m5 0h1m2 0h2m1 0h2m1 0h1m2 0h3m3 0h1m3 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m2 0h7m2 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h1m2 0h5m1 0h1m1 0h1m1 0h2m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h4m2 0h1m2 0h1m1 0h3m1 0h4m-28 1h1m5 0h1m2 0h1m2 0h2m1 0h1m5 0h2m2 0h2m1 0h1m-29 1h7m1 0h1m1 0h1m2 0h2m2 0h1m1 0h1m2 0h2m2 0h1"/></svg>
+        <p class="muted small">Apunta la cámara al código para abrir esta página.</p>
+      </div>
+    </section>
+
+    <section class="wrap facts">
+      <h2>Es una demostración</h2>
+      <ul>
+        <li>Nada se cobra ni se paga: el saldo, las recargas y las comisiones son de ejemplo.</li>
+        <li>Las personas, los autos y las placas son inventados.</li>
+        <li>No usa tu ubicación: el mapa empieza en Miraflores, Lima.</li>
+        <li>Lo que escribes se queda en tu teléfono. Al cerrar o recargar, la demostración empieza de cero.</li>
+        <li>Los botones para llamar (a la central o al 105) sí abren el teléfono de verdad.</li>
+        <li>Los sonidos se apagan desde <b>Cuenta</b>; nunca cortan tu música.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="wrap foot">
+    <p><strong>Muy pronto en Google Play y App Store.</strong></p>
+    <p class="muted small">Versión 1.0.0 (1) · a3a5144 · actualizada el 26/10/2026</p>
+  </footer>
+</body>
+</html>

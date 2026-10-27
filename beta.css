@@ -1,0 +1,402 @@
+/* Página de la beta de demostración. Colores y letras de la marca (taxinka_ui). */
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('fonts/BricolageGrotesque-Variable.ttf') format('truetype');
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/Figtree-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #14162b;
+  --ink-2: #3a3e66;
+  --paper: #f7f5ef;
+  --sand: #e9e5da;
+  --yellow: #ffc928;
+  --night: #131630;
+  --night-2: #1d2147;
+  --night-text: #c3c6da;
+  --line: rgba(20, 22, 43, 0.12);
+  --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.55 var(--body);
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(34px, 7vw, 58px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  max-width: 14ch;
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.small {
+  font-size: 14px;
+}
+
+/* Barra superior */
+
+.top {
+  background: var(--ink);
+  color: #fff;
+}
+
+.top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--yellow);
+  display: grid;
+  place-items: center;
+}
+
+.badge svg {
+  width: 26px;
+  height: 26px;
+}
+
+.word {
+  font: 800 24px/1 var(--display);
+  letter-spacing: -0.02em;
+}
+
+.chip {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 201, 40, 0.16);
+  color: var(--yellow);
+  white-space: nowrap;
+}
+
+/* Portada */
+
+.hero {
+  background: var(--ink);
+  color: #fff;
+  padding: 36px 0 120px;
+}
+
+.lead {
+  margin-top: 16px;
+  max-width: 60ch;
+  font-size: 18px;
+  color: var(--night-text);
+}
+
+/* Las dos apps */
+
+.apps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin-top: -88px;
+}
+
+@media (min-width: 860px) {
+  .apps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.app {
+  border-radius: 28px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 18px 50px rgba(20, 22, 43, 0.18);
+  overflow: hidden;
+}
+
+.app-pasajero {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.app-conductor {
+  background: var(--night);
+  color: #fff;
+}
+
+.app-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* El ícono tiene el mismo fondo que su tarjeta: un borde lo separa. */
+.app-head img {
+  border-radius: 14px;
+  flex: none;
+  box-shadow: 0 0 0 2px var(--ink);
+}
+
+.app-conductor .app-head img {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.app-head h2 {
+  font-size: 26px;
+}
+
+.app-head p {
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.app-text {
+  font-size: 17px;
+  max-width: 46ch;
+}
+
+.app-conductor .app-text {
+  color: var(--night-text);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px;
+  padding: 8px 22px;
+  border-radius: 16px;
+  font: 700 16px/1.2 var(--body);
+  text-decoration: none;
+  text-align: center;
+  flex: 1 1 220px;
+}
+
+.btn small {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--ink-2);
+  outline-offset: 3px;
+}
+
+.btn-ink {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn-yellow {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.btn-line {
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+
+.btn-line-light {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.app-conductor .btn:focus-visible {
+  outline-color: var(--yellow);
+}
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.shots img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 3px solid rgba(20, 22, 43, 0.9);
+  background: var(--sand);
+}
+
+.app-conductor .shots img {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Guía */
+
+.guide,
+.install,
+.facts,
+.feedback {
+  margin-top: 48px;
+}
+
+.guide > .muted {
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+@media (min-width: 760px) {
+  .cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+li::marker {
+  font-weight: 700;
+}
+
+.install {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 860px) {
+  .install {
+    grid-template-columns: 1.3fr 1fr auto;
+  }
+}
+
+.install .small {
+  margin-top: 12px;
+}
+
+/* El QR solo sirve en una computadora: en el celular ya estás aquí. */
+.qr {
+  display: none;
+  text-align: center;
+}
+
+@media (min-width: 860px) and (hover: hover) {
+  .qr {
+    display: block;
+  }
+}
+
+.qr svg {
+  width: 168px;
+  height: 168px;
+  display: block;
+  margin: 4px auto 8px;
+}
+
+.facts ul {
+  margin-top: 16px;
+  font-size: 17px;
+}
+
+.feedback {
+  display: flex;
+}
+
+.feedback .btn {
+  flex: 0 1 360px;
+}
+
+.foot {
+  margin-top: 56px;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 4px;
+}

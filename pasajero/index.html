@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <!-- La beta se publica en una subcarpeta: el CI cambia esta base por «./». -->
+  <base href="./">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Demostración de Taxinka para pasajeros: pide un taxi, una mototaxi o un envío al precio que acuerdas.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FFC928">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Taxinka">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Taxinka · demostración</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #F7F5EF; overflow: hidden; }
+    /* En el celular la app ocupa toda la pantalla. */
+    #app { position: fixed; inset: 0; }
+    #splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 18px; background: #F7F5EF; z-index: 10;
+      font: 600 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; color: #5A5D72;
+      transition: opacity .25s ease;
+    }
+    #splash .badge { width: 88px; height: 88px; border-radius: 20px; background: #FFC928;
+      display: grid; place-items: center; animation: pulse 1.4s ease-in-out infinite; }
+    #splash .badge svg { width: 60px; height: 60px; }
+    @keyframes pulse { 50% { transform: scale(.94); } }
+    #back { display: none; }
+    /* En una computadora, un teléfono al centro de la pantalla. */
+    @media (min-width: 720px) and (min-height: 600px) {
+      body { background: #E9E5DA; }
+      #app, #splash {
+        inset: auto; left: 50%; top: 50%; transform: translate(-50%, -50%);
+        width: 400px; height: min(860px, calc(100vh - 72px)); border-radius: 36px; overflow: hidden;
+        box-shadow: 0 0 0 10px #000, 0 30px 80px rgba(0, 0, 0, .35);
+      }
+      #back {
+        display: block; position: fixed; top: 14px; left: 18px; color: #5A5D72;
+        font: 600 14px/1 system-ui, -apple-system, "Segoe UI", sans-serif; text-decoration: none;
+      }
+      #back:hover { text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <a id="back" href="../">← Volver a la beta</a>
+  <div id="app"></div>
+  <div id="splash" role="status">
+    <div class="badge"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#14162B" d="M51.2 89.6 A17.92 17.92 0 0 1 69.12 71.68 L442.88 71.68 A17.92 17.92 0 0 1 460.8 89.6 L460.8 140.8 A17.92 17.92 0 0 1 442.88 158.72 L396.8 158.72 A17.92 17.92 0 0 0 378.88 176.64 L378.88 212.48 A17.92 17.92 0 0 1 360.96 230.4 L330.24 230.4 A17.92 17.92 0 0 0 312.32 248.32 L312.32 422.4 A17.92 17.92 0 0 1 294.4 440.32 L217.6 440.32 A17.92 17.92 0 0 1 199.68 422.4 L199.68 248.32 A17.92 17.92 0 0 0 181.76 230.4 L151.04 230.4 A17.92 17.92 0 0 1 133.12 212.48 L133.12 176.64 A17.92 17.92 0 0 0 115.2 158.72 L69.12 158.72 A17.92 17.92 0 0 1 51.2 140.8 Z"/></svg></div>
+    <span>Cargando Taxinka…</span>
+  </div>
+  <script>
+    // La primera vez descarga unos megas: el aviso se va con el primer cuadro de la app.
+    window.addEventListener('flutter-first-frame', function () {
+      var splash = document.getElementById('splash');
+      splash.style.opacity = '0';
+      setTimeout(function () { splash.remove(); }, 300);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
